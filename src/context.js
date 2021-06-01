@@ -6,7 +6,7 @@ const AppContext = React.createContext();
 
 const AppProvide = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(true);
 
   const openSidebar = () => {
     setIsSidebarOpen(true);
@@ -16,11 +16,23 @@ const AppProvide = ({ children }) => {
   };
 
   const openModal = () => {
-    setIsModalOpen(true);
+    setIsSubmenuOpen(true);
   };
   const closeModel = () => {
-    setIsModalOpen(false);
+    setIsSubmenuOpen(false);
   };
 
-  return <App.AppContext>{children}</App.AppContext>;
+  return (
+    <App.AppContext
+      values={{
+        isSubmenuOpen,
+        isSidebarOpen,
+        openModal,
+        openSidebar,
+        closeSidebar,
+        closeModel,
+      }}>
+      {children}
+    </App.AppContext>
+  );
 };
