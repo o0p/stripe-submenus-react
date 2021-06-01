@@ -36,3 +36,7 @@ const AppProvide = ({ children }) => {
     </App.AppContext>
   );
 };
+
+export const useGlobalContext = () => {
+  return useContext(AppContext);
+};
