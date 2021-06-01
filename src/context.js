@@ -6,5 +6,6 @@ const AppContext = React.createContext();
 
 const AppProvide = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(true);
   return <App.AppContext>{children}</App.AppContext>;
 };
