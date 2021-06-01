@@ -1,2 +1,11 @@
-import React, { useState, useContext } from 'react'
-import sublinks from './data'
+import React, { useState, useContext } from 'react';
+import App from './App';
+import sublinks from './data';
+
+const AppContext = React.createContext();
+
+const AppProvide = ({ children }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(true);
+  return <App.AppContext>{children}</App.AppContext>;
+};
