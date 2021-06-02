@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { AppProvide } from './context';
+import { AppProvider } from './context';
 ReactDOM.render(
   <React.StrictMode>
-    <AppProvide>
+    <AppProvider>
       <App />
-    </AppProvide>
+    </AppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
