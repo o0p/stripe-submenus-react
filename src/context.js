@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import App from './App';
 import sublinks from './data';
 
 const AppContext = React.createContext();
@@ -11,6 +10,7 @@ export const AppProvider = ({ children }) => {
   const openSidebar = () => {
     setIsSidebarOpen(true);
   };
+
   const closeSidebar = () => {
     setIsSidebarOpen(false);
   };
@@ -18,19 +18,19 @@ export const AppProvider = ({ children }) => {
   const openModal = () => {
     setIsSubmenuOpen(true);
   };
-  const closeModel = () => {
+  const closeModal = () => {
     setIsSubmenuOpen(false);
   };
 
   return (
     <AppContext.Provider
-      values={{
+      value={{
         isSubmenuOpen,
         isSidebarOpen,
         openModal,
         openSidebar,
         closeSidebar,
-        closeModel,
+        closeModal,
       }}>
       {children}
     </AppContext.Provider>
