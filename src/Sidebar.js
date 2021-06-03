@@ -14,6 +14,16 @@ const Sidebar = () => {
         <button className="close-btn" onClick={closeSidebar}>
           <FaTimes />
         </button>
+        <div className="side-links">
+          {sublinks.map((item, index) => {
+            const { links, page } = item;
+            return (
+              <article key={index}>
+                <h4>{page}</h4>
+              </article>
+            );
+          })}
+        </div>
       </div>
     </aside>
   );
