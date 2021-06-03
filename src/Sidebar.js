@@ -4,13 +4,13 @@ import sublinks from './data';
 import { useGlobalContext } from './context';
 
 const Sidebar = () => {
-  const { isSidebarOpen, closeSidebar } = useGlobalContext;
+  const { isSidebarOpen, closeSidebar } = useGlobalContext();
   return (
     <aside
       className={`${
         isSidebarOpen ? 'sidebar-wrapper show ' : 'sidebar-wrapper'
       }`}>
-      sidebar component
+      <div className="sidebar"></div>
     </aside>
   );
 };
