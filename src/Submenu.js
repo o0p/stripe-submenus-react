@@ -3,7 +3,9 @@ import { useGlobalContext } from './context';
 
 const Submenu = () => {
   const { isSubmenuOpen } = useGlobalContext();
-  return <h2>submenu component</h2>;
+  return (
+    <aside className={`${isSubmenuOpen ? 'subnenu show' : 'submenu'}`}></aside>
+  );
 };
 
 export default Submenu;
