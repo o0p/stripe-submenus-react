@@ -37,6 +37,7 @@ export const AppProvider = ({ children }) => {
         closeSidebar,
         closeSubmenu,
         location,
+        page,
       }}>
       {children}
     </AppContext.Provider>
